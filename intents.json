@@ -1,0 +1,244 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "what's up", "howdy", "yo", "hiya", "greetings", "hi there", "hello there", "start", "begin"],
+      "responses": ["Hello! How can I assist you today?", "Hi there! What would you like to know?", "Hey! Ready to help with any campus information you need.", "Welcome! How may I help you with your queries?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "see you later", "catch you later", "I'm done", "exit", "end", "finish", "quit", "that's all", "thanks bye", "bye bye"],
+      "responses": ["Goodbye! Take care.", "See you soon!", "All the best!", "Have a great day!", "Feel free to chat anytime you need assistance!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "I appreciate it", "many thanks", "cheers", "thank you so much", "thanks a lot", "appreciate your help", "that was helpful"],
+      "responses": ["You're welcome!", "Glad I could help!", "Anytime!", "Happy to assist!", "It's my pleasure to help!"]
+    },
+    {
+      "tag": "admission",
+      "patterns": ["how do I apply?", "admission process", "requirements to apply", "enrollment info", "how to get admitted", "application deadline", "when can I apply", "admission criteria", "entrance exam", "admission test", "application form", "how to submit application", "what documents are needed for admission"],
+      "responses": ["You can apply online through our admissions portal.", "Admissions are open now—visit our website to apply.", "Fill out the application and upload required documents.", "The admission process includes submitting your application form, academic transcripts, and attending an entrance test. The deadline is July 15th.", "Required documents include academic transcripts, ID proof, and recommendation letters. Apply online through the admissions portal."]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["what courses are offered?", "available programs", "undergraduate courses", "do you offer online classes?", "list of subjects", "course catalog", "degree programs", "what can I study here", "majors offered", "postgraduate programs", "diploma courses", "certificate programs", "distance learning options"],
+      "responses": ["We offer courses in Computer Science, Engineering, Business, Arts, and Law.", "Yes, we have online and hybrid programs.", "Visit our course catalog page for the full list.", "Our programs include Bachelor's, Master's, and Diploma courses across various disciplines including Technology, Business, Sciences, and Arts.", "We offer both in-person and online learning options for most of our programs."]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["tuition fees", "how much is the fee", "course cost", "fee structure", "price of programs", "payment options", "fee installments", "scholarship discount", "annual fees", "semester fee", "when to pay fees", "late payment penalty", "fee refund policy"],
+      "responses": ["Fees vary by program. Visit the finance section for details.", "We offer merit-based and need-based financial aid.", "Tuition for undergrads starts at $10,000 per year.", "Payment can be made online through our student portal using credit/debit cards or bank transfers.", "Fees can be paid in installments - 40% at admission and remaining in two equal installments."]
+    },
+    {
+      "tag": "scholarships",
+      "patterns": ["scholarships available?", "can I get financial aid?", "scholarship options", "apply for scholarship", "merit scholarship", "financial assistance", "fee waiver", "education loan", "scholarship eligibility", "how to get a scholarship", "scholarship application deadline", "scholarship amount", "full scholarship"],
+      "responses": ["Yes, we offer several scholarships—both merit and need-based.", "Apply for scholarships through the student portal.", "Deadlines vary, check the scholarships page.", "Merit scholarships cover up to 50% of tuition fees for students with outstanding academic records.", "We have partnerships with several banks for education loans with special interest rates for our students."]
+    },
+    {
+      "tag": "financial",
+      "patterns": ["scholarships available?", "Are any financial aids available?", "can I get financial aid?", "scholarship options", "apply for scholarship", "merit scholarship", "financial assistance", "fee waiver", "education loan", "scholarship eligibility", "how to get a scholarship", "scholarship application deadline", "scholarship amount", "full scholarship"],
+      "responses": ["Yes, we offer several scholarships—both merit and need-based.", "Apply for scholarships through the student portal.", "Deadlines vary, check the scholarships page.", "Merit scholarships cover up to 50% of tuition fees for students with outstanding academic records.", "We have partnerships with several banks for education loans with special interest rates for our students."]
+    },
+    {
+      "tag": "hostel",
+      "patterns": ["hostel available?", "on-campus accommodation?", "student housing", "dormitory options", "room facility", "hostel fees", "hostel amenities", "boarding facilities", "room sharing options", "hostel application", "accommodation availability", "hostel rules", "off-campus housing"],
+      "responses": ["Yes, hostels are available for all students.", "Choose from single, shared, or deluxe rooms with meal plans.", "Accommodation application opens post-admission.", "Hostel facilities include Wi-Fi, laundry services, recreation areas, and 24/7 security.", "Hostel fees range from $1,500 to $3,000 per semester depending on the room type and meal plan."]
+    },
+    {
+      "tag": "hostel_details",
+      "patterns": ["tell me more about hostels", "hostel rooms information", "hostel facilities details", "are hostels air-conditioned", "hostel wardens", "hostel mess food", "hostel visiting hours", "can parents stay in hostel", "hostel furniture", "hostel gym", "hostel internet speed", "outside food in hostel", "hostel curfew time"],
+      "responses": ["Our hostels offer single, double and triple occupancy rooms. All rooms come with beds, study tables, chairs, wardrobes, and high-speed internet.", "Hostel facilities include 24/7 hot water, air conditioning in premium blocks, dedicated study rooms, TV rooms, gym, and indoor games areas.", "Hostels have separate blocks for boys and girls with a full-time warden for each block. Curfew time is 10 PM for all students.", "The hostel mess provides vegetarian and non-vegetarian meal options with special menus on weekends. Outside food delivery is allowed until 9 PM.", "Parents can visit during designated hours (9 AM to 6 PM) and short-stay guest accommodations are available with advance booking for visiting family members."]
+    },
+    {
+      "tag": "canteen",
+      "patterns": ["where is the canteen?", "food options on campus", "cafeteria timings", "is food hygienic?", "canteen menu", "meal plans", "food prices", "vegetarian options", "special diet accommodation", "food court", "campus restaurant", "food quality", "meal card"],
+      "responses": ["Our canteen offers diverse and hygienic food choices.", "Located in the Student Center and open till 10 PM.", "Daily menus are posted online.", "We offer vegetarian, vegan, and special diet options in our cafeteria.", "The canteen accepts both cash and digital payments through the student meal card."]
+    },
+    {
+      "tag": "library",
+      "patterns": ["library facilities", "study room access", "is library open today?", "ebooks access", "library hours", "how to borrow books", "digital library", "online journals", "library membership", "book return policy", "library fine", "reference section", "quiet study spaces"],
+      "responses": ["The library is open 7 days a week.", "You can access physical books, e-resources, and private study rooms.", "Use your student ID to borrow up to 5 books.", "Our digital library provides access to over 50,000 e-books and 10,000 journals.", "The library has dedicated quiet zones, group study rooms, and multimedia sections."]
+    },
+    {
+      "tag": "sports",
+      "patterns": ["sports activities", "is there a gym?", "playground availability", "swimming pool access", "intramural games", "sports equipment", "fitness center", "sports tournaments", "sports coaching", "sports scholarships", "indoor sports", "outdoor sports facilities", "athletic tracks"],
+      "responses": ["We have a fully equipped gym, pool, tennis and basketball courts.", "Join sports clubs via the campus portal.", "Intramural tournaments are held every semester.", "Professional coaches are available for various sports including cricket, football, basketball, and swimming.", "The gym is open from 6 AM to 10 PM daily with trainers available during working hours."]
+    },
+    {
+      "tag": "clubs",
+      "patterns": ["what clubs can I join?", "student clubs", "extracurricular activities", "coding club", "robotics club", "cultural clubs", "music club", "debate society", "how to form a new club", "club membership fees", "club events", "professional clubs", "hobby clubs"],
+      "responses": ["We have over 30 clubs: tech, music, arts, photography, drama, and more!", "You can sign up during Club Fair Week.", "Clubs include technical societies, cultural groups, sports teams, and special interest groups.", "To form a new club, you need at least 10 members and a faculty advisor.", "Most clubs are free to join with minimal activity fees for special events."]
+    },
+    {
+      "tag": "career_services ",
+      "patterns": ["career support", "internship help", "placement service", "job guidance", "recruitment opportunities", "career counseling", "resume building", "interview preparation", "campus placements", "industry connections", "job fair", "alumni network", "career development programs"],
+      "responses": ["Career services include resume help, mock interviews, and internships.", "We host campus placements every year.", "Explore companies hiring through our career portal.", "Our Career Development Center offers personalized counseling, industry workshops, and networking events.", "We have tie-ups with over 200 companies for internships and placements."]
+    },
+    {
+      "tag": "transport",
+      "patterns": ["bus service", "campus transport", "how do I travel to campus?", "shuttle timings", "university bus", "transport facilities", "bus routes", "transport fees", "campus parking", "bicycle rental", "transport card", "last mile connectivity", "bus pass"],
+      "responses": ["Shuttles run every 30 minutes between 7AM and 9PM.", "We cover major city routes.", "Check the transport section on our site.", "Campus buses connect to all major public transport hubs in the city.", "Transport fees are included in your tuition; no separate payment is required."]
+    },
+    {
+      "tag": "location",
+      "patterns": ["where is the admin office?", "campus map", "directions to university", "main building location", "how to reach campus", "campus address", "landmark near university", "campus tour", "virtual tour", "campus navigation", "building locations", "campus layout"],
+      "responses": ["The admin office is on the 1st floor of the Main Building.", "Visit our interactive campus map online.", "Our campus is located at University Road, Downtown, accessible by public transport and private vehicles.", "We offer guided campus tours every weekend for visitors.", "You can download our campus navigation app for real-time directions."]
+    },
+    {
+      "tag": "event",
+      "patterns": ["upcoming events", "college fest", "annual day", "seminars", "guest lectures", "cultural events", "technical symposium", "workshops", "event registration", "event calendar", "event tickets", "past events", "event recordings"],
+      "responses": ["Upcoming events: Hackathon, Tech Talk, Music Night.", "Our annual fest 'U-Fest' is next month!", "All events are listed in the Student Portal.", "Register for events through the Events section in the student portal.", "Event recordings are available in our digital repository for reference."]
+    },
+    {
+      "tag": "exam",
+      "patterns": ["exam timetable", "when are exams?", "internal assessments", "semester test schedule", "exam pattern", "grading system", "exam results", "supplementary exams", "exam regulations", "online exams", "exam postponement", "exam preparation resources", "mock tests"],
+      "responses": ["Exam schedules are published on the notice board and portal.", "Check your student dashboard for updates.", "Mid-semester exams are scheduled for the first week of October.", "Results are typically announced within three weeks after the examination.", "The minimum passing grade is C for all courses."]
+    },
+    {
+      "tag": "exam_schedule",
+      "patterns": ["detailed exam schedule", "final exam dates", "exam hall allocation", "exam seating arrangement", "exam day procedure", "permitted items in exam", "exam reporting time", "exam syllabus", "exam postponement criteria", "makeup exam", "practical exam schedule", "supplementary exam dates", "re-evaluation procedure"],
+      "responses": ["The detailed exam schedule is released 3 weeks before exams start. Final exams for this semester will be held from November 15-30.", "Exam hall and seating details are announced 2 days before each exam on the student portal. Students should report 30 minutes before the scheduled start time.", "Only blue/black pens, approved calculators, and transparent water bottles are permitted in the examination hall. Mobile phones and smart watches are strictly prohibited.", "The syllabus for each exam is uploaded by the respective faculty on the course page. Make sure to check for any updates.", "If you miss an exam due to medical reasons, apply for a makeup exam within 48 hours with supporting documentation. Supplementary exams for failed courses are conducted in the first week of the following semester."]
+    },
+    {
+      "tag": "faculty",
+      "patterns": ["who are the professors?", "faculty list", "teacher names", "staff directory", "department heads", "faculty expertise", "professor credentials", "faculty office hours", "meet the faculty", "new faculty members", "faculty research", "visiting faculty", "emeritus professors"],
+      "responses": ["Faculty details are available on the Departments page.", "Each department lists their own professors.", "Our faculty includes award-winning researchers and industry veterans.", "Professors maintain regular office hours for student consultations.", "You can search faculty by department or area of expertise on our website."]
+    },
+    {
+      "tag": "rules",
+      "patterns": ["discipline policy", "rules and regulations", "anti-ragging", "attendance policy", "dress code", "code of conduct", "campus rules", "prohibited items", "disciplinary action", "student responsibilities", "rights and obligations", "academic integrity", "plagiarism policy"],
+      "responses": ["Attendance is mandatory for 75% of all classes.", "Ragging is strictly prohibited with zero tolerance.", "Read the student handbook for full guidelines.", "All students must follow the university dress code on formal occasions.", "Academic dishonesty can result in course failure or even expulsion."]
+    },
+    {
+      "tag": "complaint",
+      "patterns": ["I have a complaint", "how to report an issue?", "grievance redressal", "student complaint process", "anonymous complaints", "harassment reporting", "who to contact for problems", "complaint status", "emergency complaint", "issue resolution", "suggestion box", "feedback on services"],
+      "responses": ["Please contact the Student Welfare Office or use the Grievance Portal online.", "All complaints are treated confidentially and investigated promptly.", "For urgent issues, contact the 24/7 helpline at 1800-XXX-XXXX.", "You can track the status of your complaint through the student portal.", "We have a zero-tolerance policy for any form of harassment."]
+    },
+    {
+      "tag": "wifi",
+      "patterns": ["wifi on campus", "internet access", "wifi speed", "how to connect to wifi?", "wifi password", "internet down", "wifi coverage", "data limits", "internet restrictions", "wifi troubleshooting", "network issues", "wifi registration", "guest wifi"],
+      "responses": ["Wi-Fi is available across campus for all students.", "Login using your student credentials.", "Our campus has high-speed internet with 100 Mbps connectivity.", "For technical issues, contact the IT Helpdesk in the Admin Block.", "Guest WiFi is available for visitors with a valid ID."]
+    },
+    {
+      "tag": "login_issue",
+      "patterns": ["can't login to portal", "forgot password", "login help", "access denied", "account locked", "reset password", "username forgotten", "login error", "two-factor authentication", "account security", "multiple login attempts", "session timeout", "browser compatibility"],
+      "responses": ["Try resetting your password from the login page.", "If it doesn't work, contact IT support.", "Your account gets locked after 5 incorrect attempts.", "Clear your browser cache or try using a different browser.", "For immediate assistance, visit the IT Help Desk with your ID card."]
+    },
+    {
+      "tag": "contact",
+      "patterns": ["contact info", "how to call admissions?", "email address", "phone number", "contact department", "helpline number", "contact hours", "emergency contact", "international contact", "admissions contact", "technical support contact", "finance department contact"],
+      "responses": ["Visit our Contact page or call the helpline at +1234567890.", "Email support is available: help@university.edu", "Each department has dedicated contact information listed on our website.", "Our support team is available from 9 AM to 6 PM on weekdays.", "For emergencies, contact campus security at 1800-XXX-XXXX."]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["what's the weather like?", "will it rain today?", "campus temperature", "weather forecast", "is it cold outside", "sunny today", "weather updates", "seasonal weather", "weather advisory", "weather app", "weather information"],
+      "responses": ["You can check the real-time weather on your phone or Google.", "Looks sunny today, but carry an umbrella just in case!", "The campus experiences mild temperatures throughout the year.", "We post weather advisories on the student portal during extreme conditions.", "Today's temperature is around 25°C with a chance of evening showers."]
+    },
+    {
+      "tag": "motivation",
+      "patterns": ["I'm feeling low", "motivate me", "any inspiration?", "feeling stressed", "exam stress", "deadline pressure", "mental health support", "student counselor", "anxiety help", "need encouragement", "overwhelmed with work", "balancing studies", "academic pressure"],
+      "responses": ["You've got this! Every expert was once a beginner.", "Take a deep breath. You're doing great.", "Believe in yourself. You're capable of amazing things.", "Our Counseling Center offers free services for all students.", "Remember to take breaks and practice self-care during stressful periods."]
+    },
+    {
+      "tag": "notification",
+      "patterns": ["any notifications", "important notices", "updates today", "latest announcements", "check notifications", "missed notification", "notification settings", "push notifications", "email notifications", "notification center", "urgent notices", "notification history", "class cancellation notices"],
+      "responses": ["All notifications are available on your student dashboard.", "Enable push notifications in the app to receive real-time updates.", "Important announcements are sent via email and SMS.", "Today's notifications include a schedule change for tomorrow's classes and library hour extension.", "You can customize notification preferences in your profile settings."]
+    },
+    {
+      "tag": "feedback",
+      "patterns": ["give feedback", "feedback form", "course feedback", "teacher evaluation", "suggestion submission", "feedback process", "anonymous feedback", "improvement suggestions", "rate the facilities", "service feedback", "teaching quality feedback", "infrastructure feedback", "feedback deadline"],
+      "responses": ["Course feedback forms are available at the end of each semester.", "Your feedback helps us improve our services and teaching quality.", "Submit anonymous feedback through the Student Feedback Portal.", "Feedback on facilities can be submitted anytime through the maintenance section.", "We value your suggestions and actively implement feasible improvements."]
+    },
+    {
+      "tag": "timetable",
+      "patterns": ["class schedule", "timetable for semester", "lecture timings", "daily schedule", "class timings today", "lab schedule", "tutorial timings", "timetable changes", "class clashes", "download timetable", "personalized schedule", "weekly timetable", "weekend classes"],
+      "responses": ["Your personalized timetable is available on the student portal.", "Timetables are finalized one week before semester begins.", "Class schedules are from 8 AM to 5 PM on weekdays.", "You can download your timetable as PDF or sync it with your calendar app.", "Any changes to the schedule will be notified at least 24 hours in advance."]
+    },
+    {
+      "tag": "timetable_details",
+      "patterns": ["detailed class schedule", "class schedule conflicts", "lab timing conflicts", "back-to-back classes", "lunch break in timetable", "morning classes", "evening classes", "weekend lab schedule", "optional classes in timetable", "special lectures schedule", "guest lecture timings", "tutorial schedule", "practical schedule"],
+      "responses": ["Your detailed class schedule shows all mandatory and elective courses with room numbers and faculty names. There's a built-in 1-hour lunch break from 12-1 PM each day.", "If you notice any conflicts in your timetable, please report them immediately to the Academic Coordinator. The system shouldn't allow back-to-back classes in different buildings.", "Lab sessions are typically scheduled in 3-hour blocks, while lectures are 1-hour long. Tutorials are usually 1.5 hours per week per subject.", "The timetable automatically adjusts for holidays and special events. Special lectures and guest sessions are highlighted in yellow and notified separately.", "Evening classes (after 5 PM) are only scheduled for part-time programs. Regular undergraduate programs have classes between 8 AM and 5 PM only."]
+    },
+    {
+      "tag": "elective_selection",
+      "patterns": ["how to choose electives", "elective courses", "elective selection process", "change my elective", "elective registration", "available electives", "elective credits", "elective prerequisites", "minor specialization", "dropping electives", "elective selection deadline", "popular electives", "recommended electives"],
+      "responses": ["Elective selection opens two weeks before semester registration.", "You can select electives based on your major and credit requirements.", "The portal shows available seats and prerequisites for each elective.", "You can change your elective within the first two weeks of the semester.", "Consult with your academic advisor for elective recommendations based on your career goals."]
+    },
+    {
+      "tag": "open_electives",
+      "patterns": ["list of open electives", "interdisciplinary electives", "open elective options", "non-departmental electives", "free elective choices", "open elective credits", "open elective eligibility", "popular open electives", "easy open electives", "open elective recommendations", "open elective selection process", "elective across departments", "global electives"],
+      "responses": ["We offer 40+ open electives across various departments including Design Thinking, Digital Marketing, Artificial Intelligence, Environmental Studies, and World Cinema.", "Open electives allow you to explore subjects outside your major. Each student must complete at least 2 open electives (6 credits) to graduate.", "Registration for open electives is based on CGPA and first-come-first-served basis. The portal opens on the 15th of the month preceding the semester start.", "The most popular open electives include Introduction to Psychology, Business Analytics, Creative Writing, and Basic Japanese. These fill up quickly, so register early.", "You can filter open electives by department, credits, scheduling, and difficulty level on the course registration portal. Faculty profiles and previous years' ratings are also available to help you choose."]
+    },
+    {
+      "tag": "student_login",
+      "patterns": ["student login portal", "how to login as student", "student access", "student dashboard", "first time login", "student account", "student profile", "student portal features", "mobile login", "student app login", "multiple device login", "remember password", "student id login"],
+      "responses": ["Login to the student portal using your student ID and password.", "First-time users should use their registration number and DOB (DDMMYYYY) format.", "The student dashboard gives access to timetables, grades, fees, and campus services.", "You can reset your password through the 'Forgot Password' option.", "For security reasons, log out when using shared computers."]
+    },
+    {
+      "tag": "fees_payment",
+      "patterns": ["how to pay fees", "fees payment methods", "online payment", "fees installment", "payment deadline", "payment receipt", "fees payment status", "partial payment", "payment gateway", "fees transaction", "payment confirmation", "payment failure", "fees due date"],
+      "responses": ["Fees can be paid online through the student portal using credit/debit cards or net banking.", "The payment gateway accepts all major cards and UPI transactions.", "You'll receive a payment confirmation email and SMS after successful payment.", "Payment receipts can be downloaded from the Fees section of your dashboard.", "Contact the Finance Office for installment options or payment-related issues."]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["how to pay fees", "fees payment methods", "online payment", "fees installment", "payment deadline", "payment receipt", "fees payment status", "partial payment", "payment gateway", "fees transaction", "payment confirmation", "payment failure", "fees due date"],
+      "responses": ["Fees can be paid online through the student portal using credit/debit cards or net banking.", "The payment gateway accepts all major cards and UPI transactions.", "You'll receive a payment confirmation email and SMS after successful payment.", "Payment receipts can be downloaded from the Fees section of your dashboard.", "Contact the Finance Office for installment options or payment-related issues."]
+    },
+    {
+      "tag": "specializations",
+      "patterns": ["specialization options", "areas of specialization", "specialized courses", "majors and minors", "concentration areas", "branch specializations", "domain specialization", "choosing specialization", "specialization process", "change specialization", "dual specialization", "industry-focused specialization", "required credits for specialization"],
+      "responses": ["We offer specializations in various fields including AI, Data Science, Cloud Computing, Robotics, IoT, and Cybersecurity for Computer Science students.", "Engineering students can specialize in Construction Technology, Automotive Design, Renewable Energy, Aerospace, and Smart Manufacturing.", "Business specializations include Marketing, Finance, HR, Operations, and International Business with industry-specific concentrations.", "The specialization selection process begins after your 4th semester. You'll need to maintain a minimum CGPA of 7.0 to be eligible for premier specializations.", "Each specialization requires 5-7 dedicated courses (15-21 credits) within that domain. A minor specialization needs 4 courses (12 credits) from a different department than your major."]
+    },
+    {
+      "tag": "campus_facilities",
+      "patterns": ["campus facilities", "student amenities", "infrastructure details", "campus services", "facility timing", "recreation center", "student lounge", "medical facilities", "banking services", "ATM on campus", "food outlets", "printing services", "laundry services"],
+      "responses": ["Our campus features 24/7 medical services, multiple ATMs, a post office, and various food outlets.", "Recreation facilities include a fully-equipped gym, swimming pool, tennis courts, and indoor games area.", "Student services include printing stations, stationery shops, laundry services, and a convenience store.", "The Student Activity Center houses clubs, lounges, music rooms, and dance studios.", "All academic buildings are wheelchair accessible with elevators and ramps."]
+    },
+    {
+      "tag": "campus_map",
+      "patterns": ["campus layout", "building locations", "map of university", "find locations", "navigate campus", "where is building", "directions within campus", "parking areas", "campus zones", "academic blocks", "administrative buildings", "student center location", "classroom locations"],
+      "responses": ["Our campus is divided into four zones: Academic, Residential, Sports, and Administrative. Each zone is color-coded on the campus map.", "Academic buildings are labeled A through H, with A-C for Sciences, D-E for Engineering, F for Business, G for Humanities, and H for Fine Arts.", "The central library is at the heart of the campus, with the Student Center and food court to its east and administration block to the west.", "Shuttle services run every 15 minutes along the main campus loop with 8 designated stops. Walking time between any two buildings is maximum 15 minutes.", "Download our campus navigation app for real-time directions, building information, and points of interest. Interactive maps are also available at key locations around campus."]
+    },
+    {
+      "tag": "lab_facilities",
+      "patterns": ["laboratory facilities", "research labs", "lab equipment", "computer labs", "lab timings", "open lab hours", "lab access", "specialized laboratories", "lab software", "engineering labs", "science labs", "lab resources", "lab booking"],
+      "responses": ["We have over 50 specialized labs across Engineering, Sciences, and Design departments.", "Computer labs are open 24/7 with the latest hardware and industry-standard software.", "Science labs are equipped with advanced research instruments and are accessible during scheduled hours.", "Engineering workshops include robotics, 3D printing, IoT, and manufacturing facilities.", "Lab access requires your student ID. Book specialized equipment through the online portal."]
+    },
+    {
+      "tag": "internship",
+      "patterns": ["internship opportunities", "summer internship", "industrial training", "internship process", "finding internships", "internship credit", "paid internships", "internship duration", "internship certificate", "internship report", "international internships", "research internships", "internship evaluation"],
+      "responses": ["Internships are mandatory for all students and carry 6 credits.", "The Career Center helps secure internships with our 200+ industry partners.", "Summer internships typically last 6-8 weeks between May and July.", "We offer both paid and unpaid internships based on company policies.", "International internships are available through our global partner universities and companies."]
+    },
+    {
+      "tag": "placements",
+      "patterns": ["placement statistics", "campus recruitment", "job placements", "highest package", "average salary", "placement process", "top recruiters", "placement preparation", "placement eligibility", "off-campus placements", "placement season", "pre-placement offers", "placement cell"],
+      "responses": ["Our placement rate is over 90% with 100+ companies visiting annually.", "The average package is $60,000 with the highest touching $120,000.", "Top recruiters include Google, Microsoft, Amazon, Goldman Sachs, and Deloitte.", "Placement preparation includes aptitude training, mock interviews, and resume workshops.", "Students with a CGPA above 7.0 are eligible for all placement opportunities."]
+    },
+    {
+      "tag": "alumni",
+      "patterns": ["alumni network", "notable alumni", "alumni association", "alumni contributions", "alumni meet", "connect with alumni", "alumni directory", "alumni benefits", "famous graduates", "alumni achievements", "alumni mentorship", "alumni donation", "alumni portal"],
+      "responses": ["Our alumni network spans 50+ countries with over 50,000 graduates.", "Notable alumni include CEOs, government officials, scientists, and entrepreneurs.", "The Alumni Association organizes annual meets and networking events.", "Alumni mentor current students through our career guidance program.", "Access the alumni directory through the portal for networking opportunities."]
+    },
+    {
+      "tag": "research",
+      "patterns": ["research opportunities", "research projects", "undergraduate research", "research funding", "research areas", "research publications", "research centers", "faculty research", "research internship", "research grants", "research conferences", "research collaboration", "research groups"],
+      "responses": ["We have 15 research centers focusing on emerging technologies and interdisciplinary areas.", "Undergraduate students can join research projects from their second year onwards.", "Our faculty publishes in top journals with over 500 publications annually.", "Research funding is available through various government and industry grants.", "International research collaborations exist with universities in the US, Europe, and Asia."]
+    },
+    {
+      "tag": "counseling",
+      "patterns": ["mental health support", "counseling services", "psychological help", "stress management", "depression help", "anxiety support", "counseling appointment", "wellness center", "student counselor", "mental wellness", "emotional support", "counseling hours", "confidential counseling"],
+      "responses": ["Our Counseling Center provides free and confidential services to all students.", "Licensed psychologists and counselors are available for individual and group sessions.", "Mental health workshops and stress management programs run throughout the semester.", "Book a counseling appointment through the wellness portal or drop in during open hours.", "All counseling services are strictly confidential and separate from academic records."]
+    },
+    {
+      "tag": "health_services",
+      "patterns": ["medical facilities", "health center", "campus clinic", "emergency medical", "health insurance", "first aid", "doctor on campus", "medical emergency", "health checkup", "vaccination services", "ambulance service", "pharmacy on campus", "hospital near campus"],
+      "responses": ["The Health Center operates 24/7 with qualified doctors and nurses.", "Emergency services include an ambulance and tie-ups with nearby hospitals.", "Basic health checkups and common medications are provided free of charge.", "All students are covered under the university health insurance plan.", "The campus pharmacy stocks essential medicines and personal health items."]
+    },
+    {
+      "tag": "academic_calendar",
+      "patterns": ["semester dates", "academic year", "holiday schedule", "semester breaks", "exam period", "registration dates", "course add/drop deadline", "commencement ceremony", "orientation week", "mid-semester break", "summer term", "winter break", "university holidays"],
+      "responses": ["The academic year consists of two semesters: Fall (August-December) and Spring (January-May).", "Each semester has 16 weeks including a mid-semester break and exam period.", "Course registration opens one month before the semester starts.", "The add/drop period is during the first two weeks of each semester.", "Check the academic calendar on the portal for all important dates and holidays."]
+    }
+  ]
+}
