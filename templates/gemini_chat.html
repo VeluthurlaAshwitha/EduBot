@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="chat-page">
+    <div class="container" style="display: flex;">
+        <div class="chat-sidebar">
+            <h3 class="sidebar-title">Suggested Topics</h3>
+            <ul class="topic-list">
+                <li class="topic-item" onclick="setQuestion('Tell me about Jain University admission process')">Admission Process</li>
+                <li class="topic-item" onclick="setQuestion('What courses are offered at Jain University?')">Available Courses</li>
+                <li class="topic-item" onclick="setQuestion('How much is the tuition fee at Jain University?')">Tuition Fees</li>
+                <li class="topic-item" onclick="setQuestion('Are scholarships available at Jain University?')">Scholarships</li>
+                <li class="topic-item" onclick="setQuestion('Tell me about hostel facilities at Jain University')">Accommodation</li>
+                <li class="topic-item" onclick="setQuestion('What sports facilities are available at Jain University?')">Sports Facilities</li>
+                <li class="topic-item" onclick="setQuestion('How can I join student clubs at Jain University?')">Student Clubs</li>
+                <li class="topic-item" onclick="setQuestion('What career services does Jain University offer?')">Career Services</li>
+            </ul>
+        </div>
+        
+        <div class="chat-main">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div>EduBot AI Assistant</div>
+                    <div class="chat-status">
+                        <div class="status-dot"></div>
+                        Online
+                    </div>
+                </div>
+                <div class="feedback-link" style="text-align: center; margin-top: 15px; padding: 10px; border-top: 1px solid #eee;">
+                    <p style="font-size: 14px; color: #777;">How was your chat experience?</p>
+                    <a href="/feedback" style="display: inline-block; margin-top: 5px; color: #3498db; text-decoration: none; padding: 8px 15px; background-color: #f1f1f1; border-radius: 5px; font-size: 14px;">
+                        Provide Feedback
+                    </a>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Hello! I'm your AI assistant specialized in Jain University information. How can I help you today?
+                        </div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
