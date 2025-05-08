@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBot - Chat with our Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f8fd;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #3498db;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        .active {
+            color: #3498db !important;
+        }
+        
+        /* Chat Section */
+        .chat-page {
+            display: flex;
+            min-height: calc(100vh - 160px);
+            padding: 40px 0;
+        }
+        
+        .chat-sidebar {
+            width: 280px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-right: 30px;
+        }
+        
+        .sidebar-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .topic-list {
+            list-style: none;
+        }
+        
+        .topic-item {
+            padding: 10px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #f5f5f5;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-item:hover {
+            color: #3498db;
+            padding-left: 5px;
+        }
+        
+        .chat-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-container {
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-status {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #2ecc71;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+            max-height: 60vh;
+        }
+        
+        .message {
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        
+        .user-message {
+            background-color: #3498db;
+            color: white;
+            margin-left: auto;
+            border-top-right-radius: 0;
+        }
+        
+        .bot-message {
+            background-color: #ecf0f1;
+            color: #333;
+            border-top-left-radius: 0;
+        }
+        
+        .message-time {
+            font-size: 0.7rem;
+            text-align: right;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        
+        #userInput {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        
+        #sendBtn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        #sendBtn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+            color: #3498db;
+        }
+        
+        .copyright {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .chat-page {
+                flex-direction: column;
+            }
+            
+            .chat-sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .topic-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .topic-item {
+                margin-right: 15px;
+                border-bottom: none;
+                padding: 5px 15px;
+                background-color: #f5f8fd;
+                border-radius: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">Edu<span>Bot</span></a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/chat" class="active">Basic Chat</a></li>
+                    <li><a href="/gemini-simple-chat">AI Chat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chat-page">
+        <div class="container" style="display: flex;">
+            <div class="chat-sidebar">
+                <h3 class="sidebar-title">Suggested Topics</h3>
+                <ul class="topic-list">
+                    <li class="topic-item" onclick="setQuestion('Tell me about the admission process')">Admission Process</li>
+                    <li class="topic-item" onclick="setQuestion('What courses are offered?')">Available Courses</li>
+                    <li class="topic-item" onclick="setQuestion('How much is the tuition fees?')">Tuition Fees</li>
+                    <li class="topic-item" onclick="setQuestion('Are any financial aids available?')">Scholarships</li>
+                    <li class="topic-item" onclick="setQuestion('Tell me about hostel facilities')">Accommodation</li>
+                    <li class="topic-item" onclick="setQuestion('What sports facilities are available?')">Sports Facilities</li>
+                    <li class="topic-item" onclick="setQuestion('How can I join student clubs?')">Student Clubs</li>
+                    <li class="topic-item" onclick="setQuestion('What career services do you offer?')">Career Services</li>
+                </ul>
+            </div>
+            
+            <div class="chat-main">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div>EduBot Assistant</div>
+                        <div class="chat-status">
+                            <div class="status-dot"></div>
+                            Online
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatbox">
+                        <div class="message bot-message">
+                            Hello! I'm EduBot, your campus assistant. How can I help you today?
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Type your message here..." autocomplete="off">
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/#features">Features</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
+                <a href="/chat">Basic Chat</a>
+                <a href="/gemini-simple-chat">AI Chat</a>
+            </div>
+            <p class="copyright">© 2025 EduBot. All Rights Reserved.</p>
+        </div>
+        <div class="feedback-link" style="text-align: center; margin-top: 15px; padding: 10px; border-top: 1px solid #eee;">
+            <p style="font-size: 14px; color: #777;">How was your chat experience?</p>
+            <a href="/feedback" style="display: inline-block; margin-top: 5px; color: #3498db; text-decoration: none; padding: 8px 15px; background-color: #f1f1f1; border-radius: 5px; font-size: 14px;">
+                Provide Feedback
+            </a>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Chat functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbox = document.getElementById('chatbox');
+            const userInput = document.getElementById('userInput');
+            const sendBtn = document.getElementById('sendBtn');
+            
+            // Function to add message to chat
+            function addMessage(message, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = isUser ? 'message user-message' : 'message bot-message';
+                
+                const messageContent = document.createTextNode(message);
+                messageDiv.appendChild(messageContent);
+                
+                const timeDiv = document.createElement('div');
+                timeDiv.className = 'message-time';
+                timeDiv.textContent = 'Just now';
+                messageDiv.appendChild(timeDiv);
+                
+                chatbox.appendChild(messageDiv);
+                
+                // Scroll to bottom
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }
+            
+            // Function to handle sending messages
+            function sendMessage() {
+                const message = userInput.value.trim();
+                
+                if (message !== '') {
+                    // Add user message to chat
+                    addMessage(message, true);
+                    
+                    // Clear input
+                    userInput.value = '';
+                    
+                    // Send to backend
+                    fetch('/get', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: 'msg=' + encodeURIComponent(message)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Add bot response to chat
+                        addMessage(data.response);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        addMessage('Sorry, there was an error processing your request.');
+                    });
+                }
+            }
+            
+            // Event listeners
+            sendBtn.addEventListener('click', sendMessage);
+            
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Focus on input when page loads
+            userInput.focus();
+        });
+        
+        // Function to set question from sidebar
+        function setQuestion(question) {
+            document.getElementById('userInput').value = question;
+            document.getElementById('userInput').focus();
+        }
+    </script>
+</body>
+</html>
